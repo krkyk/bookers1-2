@@ -1,0 +1,15 @@
+
+  <%if book.errors.any?%>
+    <div class="border border-danger bg-light">
+      <div class="text-light bg-danger px-2">
+        <%=book.errors.count%> error prohibited this book from being saved:
+      </div>
+        <ul class="mx-auto">
+          <%book.errors.full_messages.each do |message|%>
+          <li class="m-3"><%=message%></li>
+          <%end%>
+        </ul>
+    </div>
+  <%end%>
+
+

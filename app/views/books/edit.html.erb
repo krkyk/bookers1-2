@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-3">
+      <h3 class="font-weight-bold">Editing Book</h3>
+      <%=render "layouts/error",book:@book%>
+      <%=form_with model:@book,url:book_path(@book.id),method: :patch do |f|%>
+      <div class="form-group">
+        <%=f.label:Title,class:"book_title"%>
+        <%=f.text_field:title,class:"form-control book_title"%>
+      </div>
+      <div class="form-group">
+        <%=f.label:Body,class:"book_body"%>
+        <%=f.text_field:body,class:"form-control book_body"%>
+      </div>
+      <div class="form-group">
+        <%=f.submit"Update Book",class:"btn btn-sm btn-outline-dark"%>
+      </div>
+      <%end%>
+      <%=link_to"Show",book_path(@book)%> | <%=link_to"Back",books_path%>
+    </div>
+  </div>
+</div>

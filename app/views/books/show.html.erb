@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div class="col mt-3">
+      <p class="mx-3"><strong>Title:</strong><%=@book.title%></p>
+      <p class="mx-3"><strong>Body:</strong><%=@book.body%></p>
+      <p><%=link_to"Edit",edit_book_path(@book.id)%> | <%=link_to"Back",books_path%></p>
+    </div>
+  </div>
+</div>
